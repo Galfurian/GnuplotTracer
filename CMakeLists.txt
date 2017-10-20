@@ -31,8 +31,18 @@ include_directories(include)
 # Add the target library.
 add_library(${PROJECT_NAME} src/gptTracer.cpp)
 
+# -----------------------------------------------------------------------------
+# Add test directory.
 add_subdirectory(tests)
-
 enable_testing()
+add_test(NAME ProjectTest COMMAND ProjectTest "test")
 
-add_test(NAME gptTest COMMAND gptest "test")
+# -----------------------------------------------------------------------------
+# Add the documentation generation.
+find_package(Doxygen)
+if (DOXYGEN_FOUND)
+    add_custom_target(doc
+            ${DOXYGEN_EXECUTABLE} ${CMAKE_SOURCE_DIR}/doc/project.doxyfile
+            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+            COMMENT "Generating API documentation with Doxygen" VERBATIM)
+endif (DOXYGEN_FOUND)

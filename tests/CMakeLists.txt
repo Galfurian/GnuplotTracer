@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.4 FATAL_ERROR)
 
 # -----------------------------------------------------------------------------
 # Set the project name.
-SET(PROJECT_NAME gptest)
+SET(PROJECT_NAME ProjectTest)
 
 # -----------------------------------------------------------------------------
 # Create the project.
@@ -25,11 +25,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
 # -----------------------------------------------------------------------------
 # Set inlcuded directories.
-include_directories(${CMAKE_ROOT}/include)
-
-if (BUILD_TESTING)
-    add_definitions(-DTEST)
-endif (BUILD_TESTING)
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # -----------------------------------------------------------------------------
 # Add the target library.
