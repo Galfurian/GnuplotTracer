@@ -9,6 +9,7 @@
 #include <algorithm>    // std::move
 #include <cassert>      // assert
 #include <iostream>
+#include <vector>
 
 /// @brief Abstract class for storing pointers to traced variables.
 class GPTVariable
