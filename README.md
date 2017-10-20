@@ -1,4 +1,4 @@
-# GnuplotTracer
+# GnuplotTracer [![Build Status](https://travis-ci.org/Galfurian/GnuplotTracer.svg?branch=master)](https://travis-ci.org/Galfurian/GnuplotTracer)
 Classes used to plot simulation traces of variables in  C++.
 
 ## Structure
