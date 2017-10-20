@@ -6,6 +6,7 @@
 
 #include <gptTracer.hpp>
 #include <cstring>
+#include <cmath>
 
 #ifndef M_2_FOR_PI
 #define M_2_FOR_PI    6.2831853071795864
