@@ -7,5 +7,5 @@ compiler  :
 script:
   - mkdir build
   - cd    build
-  - cmake ..
+  - cmake -DCMAKE_CXX_COMPILER=clang++-5.0 ..
   - make
